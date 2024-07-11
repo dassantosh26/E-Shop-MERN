@@ -11,7 +11,7 @@ import {
 import App from "./App.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import HomeScreen from "./screens/HomeScreen.jsx";
-// import "./index.css";
+import "./index.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
