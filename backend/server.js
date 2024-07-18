@@ -5,9 +5,15 @@ import express from "express";
 import products from "./data/products.js";
 
 import dotenv from "dotenv";
+
+import connectDB from "./config/db.js";
 // Load environment variables
 dotenv.config(); //This step is required to acess env variable using vite
-const port = process.env.VITE_PORT || 8000;
+
+const port = process.env.PORT || 8000;
+
+connectDB(); //Connect to MongoDB
+
 const app = express();
 
 app.get("/", (req, res) => {
