@@ -1,8 +1,13 @@
 /** @format */
 
 import express from "express";
+
 import products from "./data/products.js";
-const port = 5000;
+
+import dotenv from "dotenv";
+// Load environment variables
+dotenv.config(); //This step is required to acess env variable using vite
+const port = process.env.VITE_PORT || 8000;
 const app = express();
 
 app.get("/", (req, res) => {
